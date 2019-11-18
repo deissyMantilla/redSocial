@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* color: white; */
+  font-family: "Raleway", sans-serif;
+}
+header {
+  background-color: #706381;
+  font-family: "Roboto", sans-serif;
+  height: 100px;
+}
+#botonPublicaciones {
+  background: #f7de1c;
+}
+.botonCambio {
+  border-radius: 20px;
+  background-color: #e8e7e1;
+  width: 80%;
+  font-size: 20px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+}
+.botonCambio:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  color: black;
+}
+.contenido {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: auto;
+}
+aside {
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8e7e1;
+}
+section {
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100%;
+}
+.divCambio {
+  width: 100%;
+  height: auto;
+  color: black;
+}
+#galeria {
+  background: #fff;
+  grid-area: 1/1;
+  z-index: -2;
+}
+#informacion {
+  background-color: #e8e7e1;
+  grid-area: 1/1;
+  z-index: -3;
+}
+#publicaciones {
+  background-color: #fff;
+  grid-area: 1/1;
+  z-index: 0;
+}
+.album {
+  overflow-y: scroll;
+  height: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  padding: 5px;
+}
+.mostrarFotos {
+  width: 700px;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+#fotoPrincipal {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.foto {
+  width: 90%;
+  height: 200px;
+  border-radius: 50%; /* 
+  border: 2px solid black; */
+}
+.foto:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+/* Estilo publicaciones*/
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: black;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f7de1c;
+  color: white;
+}
+
+/* Style the header */
+.headerPublicaciones {
+  border-radius: 20px;
+  margin: 10px;
+  border: 10px #e8e7e1;
+  background-color: #7063819d;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+
+.headerPublicaciones:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+#myInput {
+  color: black;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #f7de1c;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.colorNegro {
+  color: black;
+}
+
+#informacion {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+#infoBasica {
+  background: #e8e7e1;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#infoAdicional {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#infoEstatica {
+  background: #e8e7e1;
+  border-radius: 20px;
+  text-align: justify;
+  padding: 10px;
+  margin: 10px;
+
+  height: 100%;
+
+  z-index: 0;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#infoEditable {
+  background: #e8e7e1;
+  border-radius: 20px;
+  text-align: justify;
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+  z-index: -1;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infoEditable {
+  display: grid;
+  grid-template-columns: 150px 300px;
+  grid-template-rows: repeat(7, 30px);
+  gap: 10px;
+}
+.divInfoBasica {
+  display: flex;
+  width: 80%;
+}
+label {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.btnForm {
+  border: none;
+  width: 100px;
+  height: 30px;
+  background-color: rgb(172, 172, 172);
+}
+.btnForm:hover {
+  background-color: #f7de1c;
+}
